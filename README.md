@@ -1,76 +1,183 @@
-# The Arena — ওয়েবসাইট ওভারভিউ
+# The Voidline // Arena Prime
 
-> এই ফোল্ডারে একটি স্বতন্ত্র, inspired-by Next.js UI demo আছে। এটি কোনো Arena logo, artwork বা business content ব্যবহার করে না।
+[![Next.js](https://img.shields.io/badge/Next.js-16.3.7-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.3.0-blue?style=for-the-badge&logo=react)](https://react.dev/)
+[![Three.js](https://img.shields.io/badge/Three.js-r186-black?style=for-the-badge&logo=three.js)](https://threejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-7.0.2-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Web Audio API](https://img.shields.io/badge/Web_Audio_API-Synthesizer-orange?style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+[![Lenis Scroll](https://img.shields.io/badge/Lenis-Smooth_Scroll-black?style=for-the-badge)](https://lenis.darkroom.engineering/)
 
-## Next.js scroll demo চালানো
+> An ultra-high-performance, immersive 3D WebGL & Web Audio transmedia gaming universe built with **Next.js 16**, **React 19**, **Three.js**, and custom multi-pass GLSL shaders. Inspired by [enterthearena.com](https://enterthearena.com/), [briizz-lanuch.vercel.app](https://briizz-lanuch.vercel.app/), and [digitaldropouts.net](https://digitaldropouts.net/).
 
-নতুন Next.js + TypeScript implementation-এ scroll করার সঙ্গে সঙ্গে canvas portal expand/rotate হয় এবং তিনটি content panel transition করে।
+---
 
-```bash
-npm install
-npm run dev
+## 🌌 Overview
+
+**The Voidline // Arena Prime** is a cinematic interactive experience celebrating 35 years of legendary action gaming lineage—encompassing iconic franchises such as **Fatal Fury**, **The King of Fighters**, **Metal Slug**, and **Samurai Shodown**. 
+
+Through a continuous, spline-driven hyperspace camera trajectory, users dive through volumetric starfields, orbit reflective chrome portals, inspect holographic CRT terminals, and dock at the **Nexus Citadel** founder terminal.
+
+---
+
+## ⚡ Key Highlights
+
+- **Pure Cinematic Black Void (`#000000`)**: Deep cosmic contrast engineered to maximize neon volumetric bloom and chromatic chrome reflections.
+- **Physical "HardAudioEngine" Synthesizer**: Zero-asset, zero-latency procedural Web Audio engine featuring breathing sub-bass drones, velocity-modulated warp whooshes, and visceral **"Dam Dam" double sub-bass impacts** on every click.
+- **Minimalist Cyberpunk Telemetry HUD**: Clean, non-intrusive bottom coordinate telemetry that preserves 100% of the visual field without bulky card clutter.
+- **Nexus Citadel Command Terminal**: Multi-tab interactive modal featuring a 3D fighter hologram roster, VIP credential minting, Cyberpunk synth player, and real-time Faction War pledging.
+
+---
+
+## 🕹️ System Architecture
+
+```
+                  ┌──────────────────────────────────────────────┐
+                  │          Lenis Smooth Scroll Engine          │
+                  │      (Velocity & Spline Progress State)      │
+                  └──────────────────────┬───────────────────────┘
+                                         │
+                 ┌───────────────────────┴───────────────────────┐
+                 ▼                                               ▼
+   ┌──────────────────────────┐                    ┌───────────────────────────┐
+   │    Three.js Pipeline     │                    │      HardAudioEngine      │
+   │  - 3D Spline Traversal   │                    │  - Master Compressor Bus  │
+   │  - Chrome Portal Orbits  │                    │  - 27.5Hz Sub-Bass Drone  │
+   │  - Volumetric Stars      │                    │  - Warp Velocity Whoosh   │
+   │  - 3-Pass GLSL Pipeline  │                    │  - "Dam Dam" Click Punch  │
+   └─────────────┬────────────┘                    └─────────────┬─────────────┘
+                 │                                               │
+                 ▼                                               ▼
+   ┌──────────────────────────┐                    ┌───────────────────────────┐
+   │      WebGL Passes        │                    │    Tactile UI Audio       │
+   │  1. Main Render Target   │                    │  - Micro-Chirp Hover      │
+   │  2. Dual-Kawase Bloom    │                    │  - Fanfare Chord Chimes   │
+   │  3. Post-Process Screen  │                    │  - Seismic Thunder Blast  │
+   └─────────────┬────────────┘                    └─────────────┬─────────────┘
+                 │                                               │
+                 └───────────────────────┬───────────────────────┘
+                                         ▼
+                  ┌──────────────────────────────────────────────┐
+                  │      Interactive React 19 Client Canvas      │
+                  │    - Minimalist HUD Telemetry Strip          │
+                  │    - Real-Time Animated Equalizer Pill       │
+                  │    - Citadel Founder Command Terminal        │
+                  └──────────────────────────────────────────────┘
 ```
 
-তারপর browser-এ `http://localhost:3000` খুলুন। মূল files: `app/page.tsx`, `app/scroll-scene.tsx`, `app/globals.css`.
+---
 
-**সোর্স:** [enterthearena.com](https://enterthearena.com/)  
-**পর্যবেক্ষণের তারিখ:** ৩০ সেপ্টেম্বর ২০২৬
+## 🔊 Sound Design: HardAudioEngine
 
-## সাইটটি কী
+Inspired by modern reference sound architectures from *Briizz Launch* and *Digital Dropouts*, the audio system does not rely on static MP3 files. Instead, it is 100% procedurally synthesized in real-time via the **Web Audio API**:
 
-`The Arena` হলো Arena SNK, Inc.-এর একটি ব্র্যান্ড/কমিউনিটি ল্যান্ডিং সাইট। সাইটের ভাষ্য অনুযায়ী এটি SNK-এর action IP—**King of Fighters, Fatal Fury, Metal Slug** এবং **Samurai Shodown**—কে ঘিরে gaming, anime, film/TV, comics, event এবং fan community-র একটি transmedia উদ্যোগ।
+| Feature | Synthesis Architecture |
+|---|---|
+| **Master Bus Compressor** | Dynamic compression (`threshold: -16dB`, `knee: 24`, `ratio: 10:1`, `attack: 3ms`) prevents distortion while ensuring thunderous, punchy dynamics. |
+| **Sub-Bass Ambient Drone** | Dual-oscillator engine (`27.5 Hz A0 sine` + `55.0 Hz A1 sawtooth`) through a resonant `95 Hz` lowpass filter modulated by a slow `0.08 Hz` sine LFO. |
+| **"Dam Dam" Click Punch** | Visceral double-thud on **every single click**: Hit 1 (`155 Hz → 36 Hz` kick + `82 Hz` sub) followed at `+80ms` by Hit 2 (`125 Hz → 30 Hz` kick + `62 Hz` rolling sub). |
+| **Velocity Warp Whoosh** | Pink/white noise buffer swept dynamically from `220 Hz` to `2400 Hz` based on real-time scroll velocity (`Math.abs(velocity)`). |
+| **Thunder / Gate Strike** | Highpass noise burst transient (`1500 Hz`) combined with rolling sub-frequency rumble (`80 Hz → 24 Hz`). |
+| **Instant Gesture Auto-Wake** | Automatically initializes `AudioContext` and triggers awakening sub-drop on the user's first touch, wheel scroll, or click. |
 
-এটি প্রচলিত বহু-পেজের product website নয়। প্রধান উদ্দেশ্য হলো অল্প কনটেন্টে শক্তিশালী visual identity দেখানো এবং দর্শককে fan community-তে পাঠানো।
+---
 
-## ব্যবহারকারীর দেখা অভিজ্ঞতা
+## 🛸 Transmedia Sectors
 
-1. পুরো viewport জুড়ে কালো, grain/texture-যুক্ত একটি immersive screen দেখা যায়।
-2. উপরে কেন্দ্র বরাবর `THE ARENA` logo থাকে।
-3. মাঝখানে nested-rectangle/portal-এর মতো animated 3D visual আছে।
-4. animation/load শেষ হলে **JOIN OUR FAN COUNCIL** CTA দেখা যায়।
-5. CTA-টি নতুন ট্যাবে `thearenarising.com`-এর একটি hosted sign-up/survey link খোলে।
-6. নিচে Instagram ও TikTok, এবং Privacy/Terms লিংক আছে; ডানপাশে copyright notice।
+| Sector | Title | Lineage & Highlights |
+|---|---|---|
+| **Sector 01** | *The Voidline Prime* | Transmedia action universe, Unreal Engine 5, 35-year fighting legacy. |
+| **Sector 02** | *Fatal Fury: City of the Wolves* | REV System, Terry Bogard, Rock Howard, Just Defend parry mechanics. |
+| **Sector 03** | *King of Fighters: Nexus Prime* | 3v3 team elimination, global esports championship, Max Mode combos. |
+| **Sector 04** | *Samurai Shodown: Blood & Steel* | 1-hit lethal tension, Just Parry, Haohmaru vs Nakoruru blade clash. |
+| **Sector 05** | *Metal Slug: Heavy Artillery* | SV-001 tank, cooperative arcade action, hand-crafted military animations. |
+| **Citadel** | *Nexus Citadel Terminus* | Founder Access Terminal, VIP credentials, fighter roster, and global faction war. |
 
-এই নকশাটি তথ্য পড়ার চেয়ে mood, fandom ও brand recall তৈরিতে বেশি মনোযোগী।
+---
 
-## পেজ ও লিংক
+## 📂 Project Structure
 
-| গন্তব্য | কাজ |
-| --- | --- |
-| `/` | মূল interactive brand landing page |
-| `/privacy-policy` | কোন ব্যক্তিগত তথ্য সংগ্রহ/ব্যবহার হতে পারে, cookies ও analytics সংক্রান্ত নীতি |
-| `/terms` | ব্যবহার, মেধাস্বত্ব, user content ও দায়বদ্ধতার শর্ত |
-| `thearenarising.com/...` | Fan Council join করার বাহিরের sign-up/survey flow |
-| Instagram / TikTok / YouTube / Discord | fan-community ও social channel |
+```
+.
+├── app/
+│   ├── arena-scene.tsx        # Master WebGL 3D scene & HardAudioEngine implementation
+│   ├── globals.css            # Cyberpunk design system, HUD styles, and animations
+│   ├── layout.tsx             # Root HTML layout with Geist font variables & metadata
+│   ├── page.tsx               # Main client entry point rendering ArenaScene
+│   ├── privacy-policy/        # Legal policy route
+│   └── terms/                 # Terms of service route
+├── public/
+│   ├── buckets/               # Sector character textures & visual art assets
+│   ├── poc-overlay/           # Vector branding SVGs & icons
+│   └── end-station.png        # Citadel arrival background plate
+├── package.json               # Dependencies and build scripts
+├── tsconfig.json              # TypeScript strict configuration
+└── README.md                  # Project documentation
+```
 
-## কীভাবে তৈরি করা হয়েছে — যাচাইকৃত প্রযুক্তিগত পর্যবেক্ষণ
+---
 
-- পেজের HTML ও asset structure থেকে এটি **Next.js/React** application বলে বোঝা যায় (`/_next/static/...` assets এবং client-side rendering boundary)।
-- মূল visual layer একটি full-screen HTML `<canvas>`; rendered page-এ `data-engine="three.js r184"` পাওয়া গেছে। অর্থাৎ 3D/WebGL animation-এর জন্য **Three.js r184** ব্যবহৃত হয়েছে।
-- UI layer canvas-এর উপর fixed-positioned HTML দিয়ে রাখা: logo, CTA, social icon, legal links ও copyright text। ফলে animation এবং clickable interface আলাদা layer-এ কাজ করে।
-- CSS class-গুলো (`fixed`, `inset-0`, `font-mono`, responsive utility class) দেখে **Tailwind CSS বা Tailwind-ধাঁচের utility CSS** ব্যবহারের জোরালো ইঙ্গিত আছে; এটি অনুমান, সরাসরি source repository দেখা হয়নি।
-- পেজে একটি loading state এবং CTA-এর opacity/translate transition আছে; অর্থাৎ 3D resource load হওয়ার পর ধাপে ধাপে interface প্রকাশ করা হয়।
-- Open Graph, Twitter Card, canonical URL এবং JSON-LD `Organization`/`WebSite` structured data যোগ করা আছে—social share preview ও SEO-র জন্য।
-- Cloudflare Insights beacon পাওয়া গেছে, তাই visitor analytics ব্যবহারের ইঙ্গিত আছে। Privacy Policy-তেও cookies ও analytics provider ব্যবহারের কথা বলা হয়েছে।
+## 🚀 Getting Started
 
-## Content ও conversion strategy
+### Prerequisites
 
-- **Hero-first:** খুব কম text; logo ও motion দিয়ে প্রথম impression তৈরি।
-- **একটি প্রধান action:** Fan Council CTA-তে মনোযোগ কেন্দ্রীভূত।
-- **Owned community:** CTA-টি নিজের landing page-এর বদলে survey/sign-up platform-এ পাঠায়—সম্ভবত fan data ও feedback সংগ্রহের জন্য।
-- **Social distribution:** footer-এ social channel রেখে চলমান community engagement-এ পাঠানো হয়।
-- **Legal readiness:** Privacy ও Terms আলাদা পেজে আছে। Privacy Policy অনুযায়ী survey বা interaction-এর মাধ্যমে নাম, email এবং প্রাসঙ্গিক তথ্য নেওয়া হতে পারে।
+- **Node.js**: v18.18.0 or later (v20+ recommended)
+- **Package Manager**: `npm`, `pnpm`, or `yarn`
 
-## Accessibility ও সীমাবদ্ধতা
+### Installation
 
-- Canvas-based presentation হওয়ায় 3D visual-এর অর্থ text হিসেবে সরাসরি পাওয়া যায় না। তবে একটি screen-reader-only section-এ The Arena-এর সংক্ষিপ্ত পরিচিতি দেওয়া আছে।
-- মূল পেজে navigation বা বিস্তারিত content নেই—এটি সচেতনভাবে একটি campaign/brand gateway-এর মতো তৈরি।
-- Fan Council formটি external domain-এ যায়; তার field, validation ও data flow এই সাইটের পেজ থেকে যাচাই করা হয়নি।
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/the-arena.git
+   cd the-arena
+   ```
 
-## এই ফোল্ডারে রাখা পর্যবেক্ষণ-ফাইল
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-এই README তৈরির সময় সংগৃহীত raw HTML, rendered DOM, screenshot এবং headers স্থানীয় `.firecrawl/` ফোল্ডারে রাখা হয়েছে। এগুলো reference/debugging-এর জন্য; deployable source code নয়।
+3. Launch the development server:
+   ```bash
+   npm run dev
+   ```
 
-## সংক্ষিপ্ত সিদ্ধান্ত
+4. Open your browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
 
-The Arena-এর সাইটটি একটি **high-impact WebGL brand intro**। এখানে Next.js/React-এর উপর Three.js-based 3D scene চালানো হয়েছে, আর সাধারণ HTML UI layer দিয়ে CTA ও আইনগত/social links রাখা হয়েছে। এর business goal হলো SNK-ভিত্তিক entertainment universe-এর আবহ তৈরি করে visitor-কে Fan Council ও social community-তে নেওয়া।
+### Production Build
+
+To test and compile an optimized production build:
+```bash
+npm run build
+npm run start
+```
+
+---
+
+## 🎮 Controls & Interactions
+
+- **Scroll (Mouse Wheel / Touchpad)**: Traverses camera forward and backward along the 3D hyperspace tunnel.
+- **Touch & Drag (Mobile / Tablet)**: Smooth touch-momentum warp progression.
+- **Left Click (Anywhere)**: Triggers the physical **"Dam Dam" double sub-bass punch impact**.
+- **Right Scrubber Dots**: Instant jump to any of the 5 transmedia sectors.
+- **Citadel Docking Button**: Decelerates and opens the **Nexus Citadel Terminal**.
+- **Top-Right Audio Pill**: Toggles between `CINEMA AUDIO // LIVE [ACT]` and `MUTED`.
+
+---
+
+## 🛠️ Performance Optimizations
+
+1. **Zero Garbage Collection in Render Loop**: All vectors, uniforms, and matrices are pre-allocated outside `requestAnimationFrame`.
+2. **Dynamic Device Pixel Ratio (DPR)**: Clamped to `Math.min(window.devicePixelRatio, 2.0)` to ensure sustained 60 FPS on high-density Retina displays.
+3. **Multi-Pass Framebuffers**: Off-screen bloom target rendered at quarter-resolution (`1/4 dpr`) for cinematic glow with minimal GPU fill-rate cost.
+4. **Procedural Sound Buffers**: Zero network roundtrips for audio; sound buffers are synthesized on client boot for instant latency-free feedback.
+
+---
+
+## ⚖️ License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+*Disclaimer: "The Arena", "The Voidline", "Fatal Fury", "King of Fighters", "Samurai Shodown", and "Metal Slug" are trademarks and copyright of their respective owners. This implementation is an inspired interactive demonstration.*
