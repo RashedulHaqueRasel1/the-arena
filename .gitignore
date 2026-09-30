@@ -1,3 +1,4 @@
 .firecrawl/
 node_modules/
 .next/
+config.bat
